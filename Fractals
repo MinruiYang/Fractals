@@ -10,8 +10,8 @@ import javax.swing.JFrame;
 
 public class FractalSet extends JFrame {
 
-    private static final int FRACTAL_WIDTH = 600;
-    private static final int FRACTAL_HEIGHT = 600;
+    private static final int FRACTAL_WIDTH = 660;
+    private static final int FRACTAL_HEIGHT = 660;
     private static final String FRACTAL_TITLE = "Fractal MR";
 
     public FractalSet() {
