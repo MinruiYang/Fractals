@@ -1,0 +1,54 @@
+package edu.cornellcollege.fractal;
+
+/**
+ *
+ * @author Minrui Yang
+ * @version 15 April 2020
+ */
+public class Complex {
+    final double real;
+    final double imagine;
+    
+    public Complex(double real, double imag){
+        this.real = real;
+        this.imagine = imagine;
+    } //Complex(double, double)
+     public Complex add(Complex z){
+        return new Complex(this.real + z.real, this.imagine + z.imagine);
+    } //add(Complex)
+    
+    public Complex multiply(Complex z){
+        double first = this.real * z.real;
+        double outside = this.real * z.imagine;
+        double inside = this.imagine * z.real;
+        double last = this.imagine * z.imagine;
+        
+        return new Complex(first - last, outside + inside);
+    } //multiply(Complex) public Complex add(Complex z){
+        
+    public double magnitude(){
+        return Math.sqrt(this. real * this.real + this.imagine * this.imagine);
+    } //magnitude()
+    public double magnitudeSquared() {
+        
+//        double realSquared = this.real * this.real;
+//        double imaginarySquared = this.imaginary * this.imaginary;
+//        return realSquared + imaginarySquared;
+
+        return Math.pow(this.magnitude(), 2);
+    } // magnitudeSquared()
+    @Override
+    public String toString(){
+        if (this.imagine < 0){
+            return this.real + " - " + Math.abs(this.imagine) + "i";
+        }
+        else{
+            return this.real + " + " + this.imagine + "i";
+        }
+    }
+    
+    public static void main(String[] args) {
+        
+    }
+    
+}
